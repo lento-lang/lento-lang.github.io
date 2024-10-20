@@ -26,7 +26,7 @@ Lento aims to be [expressive](https://en.wikipedia.org/wiki/Comparison_of_progra
 
 Unlike Java or other error prone languages. Lento does not support developing code that trust exception handling using the try-catch method. We think in a more pure way, using a return type specifying the status of an unsafe operation, like in Elixir. This could be done utilizing enums or atoms for example. Take a look at the practical example below.
 
-```lento
+```hs
 enum Status = Success | FileNotFound | InvalidPermissions
 Status.Success
 ```
@@ -53,7 +53,7 @@ The design is inspired by C#, Haskell and Elixir.
 
 Variables are parameterless functions. Referencing to a variable in code will be the same as invoking the variable as a function.
 
-```lento
+```cs
 x = 10 // A function generating the constant (inferred integer) 10
 string y = "Foo"
 char z = 'A'
@@ -62,7 +62,7 @@ z = 'B' // Variables are re-assignable with values of the same type
 
 Using the variables
 
-```lento
+```js
 Console.WriteLine y() + z + x() // Prints FooB10 to the console
 ```
 
@@ -70,9 +70,9 @@ This works due to parenthesis can be omitted for function calls.
 
 ### Identifier
 
-A variable has an identifier following the pattern: [\w\_]+[\d\w\_]*
+A variable has an identifier following the pattern: `[\w\_]+[\d\w\_]*`.
 
-For example: my_var, _1, test, c1, camelCase and snake_case.
+For example: `my_var`, `_1`, `test`, `c1`, `camelCase` and `snake_case`.
 
 If a variable name is beginning with an underscore, it is interpreted as a match everything / ignores in pattern matching and is not saved in the environment.
 
@@ -112,7 +112,7 @@ A code block is a sequence of statements surrounded by curly-braces ‘`{}`’, 
 
 The value returned by the code block is per default always the result of the last expression.
 
-```lento
+```js
 result = {
     a = cond {
         10 - x > 5 -> true
@@ -135,20 +135,20 @@ A function may declare an explicit type signature to specify a formal function i
 
 The signatures for parameterless functions are simply nothing. They are only generating output, and is denoted like:
 
-```lento
+```hs
 sayHi : string
 string sayHi = "Hi"
 ```
 
 #### Named functions with single expression
 
-```lento
+```js
 int myAdd int a, int b = a + b
 ```
 
 Function with type signature (similar to Haskell). The last **<code>int</code></strong> shows the function return type.
 
-```lento
+```js
 myAdd : int, int -> int
 myAdd a, b = a + b
 ```
@@ -157,7 +157,7 @@ myAdd a, b = a + b
 
 A function body is a sequence of statements and expressions surrounded by curly brackets.
 
-```lento
+```js
 int myAdd int a, int b = {
     int c = a + b
     return c
@@ -168,13 +168,13 @@ int myAdd int a, int b = {
 
 Function applications are done by specifying a function identifier, and any parameters separated by whitespace. This is called function application by adjacency, applying a function to one or more arguments.
 
-```lento
+```js
 myFunc 1 "hello"
 ```
 
 Function application can also be formatted using a direct trailing tuple for each parameter.
 
-```lento
+```js
 myFunc(1, "hello")
 ```
 
@@ -184,8 +184,8 @@ Listen to why Anders Hejlsberg says this might be useful on his [TSConf 2019 Key
 
 A space between the function identifier and the tuple indicates that the tuple is passed as parameter to the function. Meaning the line below would throw an error for the same function used in the previous example.
 
-```lento
-myFunc (1, "hello") // Invalid Parameter Type
+```js
+myFunc (1, "hello") // Invalid Parameter Type: tuple of (int, string)
 ```
 
 ### Function varying
@@ -198,7 +198,7 @@ A function cannot have two declarations with the same parameter vector! This bre
 
 Functions are using [currying](https://en.wikipedia.org/wiki/Currying). Meaning if a function gets partially applied to a set of parameters, it returns a new function taking the rest of the defined parameters.
 
-```lento
+```cs
 myFunc2 : string -> string
 myFunc2 = myFunc 1
 myFunc2 "hello" // This is ok!
@@ -210,7 +210,7 @@ A lambda expression is an unnamed, or “anonymous” function. They are **highe
 
 The declaration for a lambda function follows the pattern: parameter vector followed by a thick arrow and lastly a single expression or code block. The parameter vector could be formatted just as a normal function, the only difference is that the type of lambda expressions are denoted using a surrounding ‘()’ specifying a new ‘generator’. So a function talong ánother function would have a similar type signature as the following.
 
-```lento
+```cs
 myHello : (string -> string), string -> string
 string myHello (string -> string) nameGenerator string title = "Hello" + nameGenerator(title)
 myHello(string title -> title + ". William", "Mr") // "Hello Mr. William"
@@ -220,7 +220,7 @@ Lambda functions are invoked just like all other functions unlike other language
 
 If an anonymous function is assigned to a named variable, the result is a regular function and has the same type signature (without the extra ’()’)
 
-```lento
+```js
 myHello : string
 string myHello = () -> {
     return "Hello"
@@ -231,19 +231,19 @@ myHello() // "Hello" (Empty tuple => no arguments)
 
 Or with no surrounding parentheses and single statement body.
 
-```lento
+```cs
 string myHello = string name -> "Hello " + name
 ```
 
 The code below is not a lambda function, but a regular one.
 
-```lento
+```cs
 string myHello string name = "Hello" + name
 ```
 
 Both functions are invoked as shown below.
 
-```lento
+```js
 myHello "Bob"  // "Hello Bob"
 myHello("Bob") // "Hello Bob"
 ```
@@ -256,7 +256,7 @@ Decorators are macros behind the scenes.
 
 They work similar to decorators in Python.
 
-```lento
+```cs
 decorator Infix<T1, T2> Function operator {
     register [T1, operator.Name, T2]
     transform AST expr {
@@ -279,7 +279,7 @@ A classification for objects structures instantiated by the class. All objects a
 
 Classes may inherit from other classes.
 
-```lento
+```cs
 class A : B {
    // A now contains the fields and methods in B
 }
@@ -296,7 +296,7 @@ Lento should support a syntactic sugar for creating classes (structs) and object
 
 Inspired by [Object Initializer in C#](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/how-to-initialize-objects-by-using-an-object-initializer).
 
-```lento
+```php
 class Car {
     // Fields
     string Brand: :unknown,
@@ -377,7 +377,7 @@ These types of methods are called static methods and specify that the function i
 
 Classes are pattern matched as shown in the example below.
 
-```lento
+```js
 Car car = Car.New("Volvo")
 Car { Brand: brand } = car
 brand // "Volvo"
@@ -399,14 +399,13 @@ With keywords, we do not mean the hardcoded non overloadable keywords you see in
 
 Compare a value against many patterns until we find a matching one. Clauses also allow extra conditions to be specified via guards. Keep in mind errors in guards do not leak but simply make the guard fail.
 
-```lento
+```elixir
 case {1, 2, 3} {
      {4, 5, 6} -> "This clause won't match"
      {1, x, 3} when x > 10 -> "This clause won't match, x = 2 < 10"
      {1, x, 3} -> "This clause will match and bind x to 2"
      _ -> "This clause would match any value"
 }
-// -> "This clause will match and bind x to 2"
 ```
 
 [https://elixir-lang.org/getting-started/case-cond-and-if.html](https://elixir-lang.org/getting-started/case-cond-and-if.html)
@@ -415,7 +414,7 @@ case {1, 2, 3} {
 
 The condition statement is a subset and alias for the case statement. Meaning instead of matching any value, the logic is limited to the `true` boolean. Every clause will be evaluated and if the result matches with `true`, that clause is evaluated and the cond returns.
 
-```lento
+```rs
 cond {
     1+1 == 3 -> "We live in a simulation"
     true -> {
@@ -441,12 +440,11 @@ An enum is a type specification that limits the value to a set of given unique v
 
 Custom types are created using the type keyword.
 
-```lento
+```hs
 type Numeric = int | float | decimal
 add : Numeric, Numeric -> Numeric
 add a b = a + b
 ```
-
 
 ### More operators
 
@@ -466,7 +464,7 @@ Modified **Asynchronous Communicating Sequential Processes** (ACSP), messages ar
 
 This will be the “main” channel for the process.
 
-```lento
+```elixir
 IO.puts "Receiving..."
 receive {
 	{:msg, message} -> IO.puts message
@@ -475,15 +473,18 @@ receive {
 IO.puts "Sending"
 send(self(), {:msg, "My message"})
 IO.puts "Done"
+```
 
-# Output:
-# Receiving...
-# -> Stuck in infinite loop
+Output:
+
+```plaintext
+Receiving...
+-> Stuck in infinite loop
 ```
 
 ### Asynchronous Channels
 
-```lento
+```elixir
 IO.puts "Receiving..."
 receive :channel1 {
 	{:msg, message} -> IO.puts message
@@ -492,17 +493,20 @@ receive :channel1 {
 IO.puts "Sending"
 send(self(), :channel1, {:msg, "My message"})
 IO.puts "Done"
+```
 
-# Output:
-# Receiving...
-# Sending
-# My message
-# Done
+Output:
+
+```plaintext
+Receiving...
+Sending
+My message
+Done
 ```
 
 ## Type-system
 
-Inspired by Haskell, C# and TypeScript.
+Inspired by Haskell, Ocaml, Rust, C#/F#, Ada and TypeScript.
 
 Nominal type system.
 
@@ -631,7 +635,6 @@ Two packages are allowed to share the same namespace but with unique module name
   </tr>
 </table>
 
-
 ## Collection Types
 
 <table>
@@ -694,33 +697,29 @@ Container objects are created dynamically and are considered value-based data ty
 
 ### More about Tuples and Vectors
 
-The difference between a tuple and vector definitions is the context. It is often called a tuple when dealing with set theory, and a vector in mathematics. But in theory, they are representing the same core concept. *“Mathematicians usually write tuples by listing the elements within parentheses "( )" and separated by commas”* and similarly *“a vector in*
+The difference between a tuple and vector definitions is the context. It is often called a tuple when dealing with set theory, and a vector in mathematics. But in theory, they are representing the same core concept. *“Mathematicians usually write tuples by listing the elements within parentheses "( )" and separated by commas”* and similarly *“a vector in mathematics is a one-dimensional array of numbers, symbols, or expressions. The elements of a vector are often referred to as scalars.”* *It can be specified using an ordered set of components, enclosed in either parentheses or angle brackets.”*
 
-![alt_text](images/image2.png "image_tooltip")
-*can be specified using an ordered set of components, enclosed in either parentheses or angle brackets.”*
-
-In **Lento**, a tuple and vector are referring to** **the **same thing**, representing the same concept.
+In **Lento**, a tuple and vector are referring to **the same thing**, representing the same concept.
 
 An interesting use case for tuples may be functions returning multiple values, see example below.
 
-```lento
+```hs
 enum Status = Succeeded | Failed
 myFunc : int, int -> (int, Status)
-myFunc a b = (a + b, Status.Succeeded) // this may be a error prone operation
+myFunc a b = (a + b, Status.Succeeded)
 ```
 
 Here the type of each element in the return tuple is directly inferred from the function type signature. This could be inferred as well for variables for example.
 
-```lento
+```ts
 myVar = (10, Status.Succeeded) // Inferred type: (int, Status)
 ```
 
 Or explicitly.
 
-```lento
+```ts
 (int, Status) myVar = (10, Status.Succeeded) // Explicit
 ```
-
 
 ### More about Maps
 
@@ -730,14 +729,14 @@ A map could be created in many ways. Using implicit type inference for each elem
 
 All keys in a map must be unique, value types may vary.
 
-```lento
+```js
 myVar = (value: 10, status: Status.Succeeded)
 // Inferred type (implicit): (a: int, b: Status)
 ```
 
 Or explicitly.
 
-```lento
+```js
 myVar : (status: Status, value: int) // Explicit
 myVar = (value: 10, status: Status.Succeeded)
 ```
@@ -746,10 +745,7 @@ myVar = (value: 10, status: Status.Succeeded)
 
 Because Lento aims to be as pure functional as possible, meaning that we don’t need references. Objects are sent as values and methods are static functions taking a this struct, and returns a new modified.
 
-```lento
 The purpose of a garbage collector in most other object-oriented languages is mainly to clean up any memory with objects without any references to it. This is not the case for Lento, on the other hand, we might want to add any behaviour to Lento that moves away from the fully pure functional paradigm a bit, meaning this might be a feature added anyways to support a certain syntax or control flow in the future.
-```
-
 
 ### Supervisor aware
 
@@ -767,14 +763,8 @@ Because we use a top down approach, instead of a backtrack reference lookup appr
 
 There are several suitable occasions to dispose of memory references, most listed below.
 
-
-*   Variable reassignment
-
-	When a variable is reassigned, the previous value is no longer used.
-
-
-*   Function return \
-After a function returns, the local scoped variables are no longer going to be used.
+* Variable reassignment: When a variable is reassigned, the previous value is no longer used.
+* Function return: After a function returns, the local scoped variables are no longer going to be used.
 
 ### Program exit
 
@@ -786,13 +776,12 @@ After the main thread of the program process finishes, all references to any mem
 
 Contains modules with functions for interacting with the local operating system. Example modules would be:
 
-
-*   Console
-*   Processes
-*   File I/O
-*   Network I/O, Sockets, Protocols
-*   Parsers for JSON, XML, HTML, (Command-line arguments?)
-*   String formatting
+* Console
+* Processes
+* File I/O
+* Network I/O, Sockets, Protocols
+* Parsers for JSON, XML, HTML, (Command-line arguments?)
+* String formatting
 
 ### Standard Library (STD)
 
@@ -812,17 +801,16 @@ Comments in lento are denoted by a leading ‘<code><em>//</em></code>’ with a
 
 ### Doc
 
-Documentional comments describe code functionality on a more general level, such as specifications for functions and their parameters. An example doc-comment looks like the following:
+Documentational comments describe code functionality on a more general level, such as specifications for functions and their parameters. An example doc-comment looks like the following:
 
-```
-///Description: A function that adds two numbers together
-///Param(a): First number to add
-///Param(b): Last number to add
-///Return: The sum of the two numbers
+```ts
+/// description: A function that adds two numbers together
+/// param a: First number to add
+/// param b: Last number to add
+/// return: The sum of the two numbers
 add : Num, Num -> Num
 add a b = a + b
 ```
-
 
 ## Configuration file
 
@@ -889,101 +877,37 @@ https://dotnet.microsoft.com/learn/languages/fsharp-hello-world-tutorial/create
 
 ## File extension
 
-<table>
-  <tr>
-   <td>Extension
-   </td>
-   <td>Description
-   </td>
-  </tr>
-  <tr>
-   <td>.LT, .lt
-   </td>
-   <td>Default Lento source file, expects an <a href="#heading=h.kyqfhmtfy214">Entry point</a>.
-   </td>
-  </tr>
-  <tr>
-   <td>.LTS, .lts
-   </td>
-   <td>Lento script file, runs top down and executes everything line by line.
-   </td>
-  </tr>
-</table>
+| Extension | Description               |
+| --------- | ------------------------- |
+| `.lt`     | Default Lento source file |
 
+## Tooling
 
-# Tooling
-
-<table>
-  <tr>
-   <td><strong>Type</strong>
-   </td>
-   <td><strong>Description</strong>
-   </td>
-   <td><strong>Priority</strong>
-   </td>
-  </tr>
-  <tr>
-   <td>Package management platform, LPM
-   </td>
-   <td>Like NPM, Hex, NuGet
-   </td>
-   <td>3
-   </td>
-  </tr>
-  <tr>
-   <td>Language Server
-   </td>
-   <td>For text editors
-   </td>
-   <td>5
-   </td>
-  </tr>
-  <tr>
-   <td>Linter (Code completion)
-   </td>
-   <td>VS Code
-   </td>
-   <td>4
-   </td>
-  </tr>
-  <tr>
-   <td>Syntax Highlighting
-   </td>
-   <td>VS Code
-   </td>
-   <td>4
-   </td>
-  </tr>
-  <tr>
-   <td>IDE
-   </td>
-   <td>Support for Visual Studio?
-   </td>
-   <td>7
-   </td>
-  </tr>
-</table>
-
-Interactive online playground, inspired by TypeScript.
+| Type                             | Description                | Priority |
+| -------------------------------- | -------------------------- | -------- |
+| CLI tool                         | Command line interface     | 1        |
+| Interpreter                      | Lento Interpreter (LI)     | 1        |
+| REPL                             | Interactive shell          | 1        |
+| Compiler                         | Lento Compiler (LC)        | 2        |
+| Package management platform, LPM | Like NPM, Hex, NuGet       | 3        |
+| Linter (Code completion)         | VS Code                    | 4        |
+| Syntax Highlighting              | VS Code                    | 4        |
+| Language Server                  | For text editors           | 5        |
+| Playground                       | Online playground          | 6        |
+| IDE                              | Support for Visual Studio? | 7        |
+| Debugger                         | Support for Visual Studio? | 7        |
 
 ## LI
 
-LI (LentoInterpreter) will be the official open source standard interpreter and interactive REPL environment for the functional language Lento written in **C#**.
-
+LI (Lento Interpreter) will be the official open source standard interpreter and interactive REPL environment for Lento.
 A nice touch would be to add support for executing external files from the internet just by providing a URI link instead of a file location. Same goes for compiling files, this would make building *installers* redundant.
-
-**Alias: Lento, LI**
 
 ## LC
 
-LC (LentoCompiler) will be the official open source standard compiler for the functional language Lento *to be written* in **Lento**.
-
+LC (Lento Compiler) will be the official open source standard compiler for the functional language Lento *written* in **Lento** itself, bootstrapping the language.
 A nice addition would be to support compilation to DLL files, exporting functions for use in other languages or by the system.
 
-**Alias: Lentoc, LentoC, LC** (For Lento compile)
-
-[https://en.wikipedia.org/wiki/Glasgow_Haskell_Compiler](https://en.wikipedia.org/wiki/Glasgow_Haskell_Compiler)
-
+[https://en.wikipedia.org/wiki/Glasgow_Haskell_Compiler](https://en.wikipedia.org/wiki/Glasgow_Haskell_Compiler),
 [https://www.haskell.org/ghc/](https://www.haskell.org/ghc/)
 
 ## LPM
@@ -991,23 +915,29 @@ A nice addition would be to support compilation to DLL files, exporting function
 *Lento package manager*. Provides the service to download and publish code as packages that can be reused. All code should be published on some kind of repository on Github, Gitlab or self-hosted, meaning you could upload a package to your own website. Packages must be zipped, or single Lento files (that may include other files in the same package, or depend on other packages).
 
 Packages will not be controlled by the manager, but only redistributing existing ones hosted by other services.
-
 The package manager holds a register of known packages. New packages are added with just a link, title and description, which adds a new row to the registry.
-
 Users should be able to upvote, downvote and comment on the package manager website, and warnings should be shown when installing new packages.
 
-Inspired by the Go package manager.
-
-**Alias: Lento pkg, LPM**
+Inspired by the Rust Cargo and Go package manager.
 
 # License
 
 The official implementation is open source and licensed under the MIT software license.
+See [LICENSE](/LICENSE.txt) for more information.
 
 # Colors and Logos
 
 Logo font: `Numans`
-Primary colors: `#2F292C` and `#FFFFFF`
+
+<div style="display: flex; align-items: baseline;">
+	<p>Primary colors:</p>
+	<div style="background-color: #2F292C; color: #FFFFFF; padding: 10px; border-radius: 5px; margin: 10px 0; max-width: 140px; font-family: monospace; text-align: center; margin-left: 8px">
+		#2F292C
+	</div>
+	<div style="background-color: #FFFFFF; color: #2F292C; padding: 10px; border-radius: 5px; border: solid 1px black; margin: 10px 0; max-width: 140px; font-family: monospace; text-align: center; margin-left: 8px">
+		#FFFFFF
+	</div>
+</div>
 
 ## Background explanation
 
@@ -1017,7 +947,7 @@ When picking a logo, we thought about the true meaning of lento, which is a care
 
 ## Hello, World!
 
-```lento
+```hs
 include System.Console
 
 @EntryPoint
@@ -1030,6 +960,12 @@ main string args = {
 Execute through the command line:
 
 ```sh
-> lento hello_world.lnt
+# Run
+> lt hello_world.lt
+Hello, world!
+
+# Compile and run
+> lt c hello_world.lt
+> hello_world
 Hello, world!
 ```
