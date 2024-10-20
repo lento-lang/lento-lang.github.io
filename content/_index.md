@@ -13,7 +13,7 @@ hideLogo = true
 					An enjoyable functional programming language that aims to purify the object-oriented paradigm.
 				</p>
 				<p>
-					<a href="/install"><button class="ui positive basic button">Learn more</button></a>
+					<a href="/docs"><button class="ui positive basic button">Learn more</button></a>
 				</p>
 			</div>
 			<div class="eight wide column landing-logo">
