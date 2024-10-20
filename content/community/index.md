@@ -20,9 +20,7 @@ Lentoers are active on a number of online areas, but the most busy are below:
 
 ## Join our Discord!
 
-<iframe src="https://discord.com/widget?id=828361561696370768&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
-
-{{< iframe src="https://discord.com/widget?id=828361561696370768&theme=dark" width="350" height="370" >}}
+{{< iframe src="https://discord.com/widget?id=828361561696370768&theme=dark" width="350" height="390" >}}
 
 [Lento Discord Community](https://discord.gg/7pHmrvwcMV)
 
