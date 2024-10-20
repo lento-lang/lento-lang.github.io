@@ -1,13 +1,14 @@
 .md-img.profile {
-  width: 100%;
-  max-width: 100px;
+	width: 100%;
+	max-width: 100px;
 }
 
 .profile-container {
-  padding-right: 0 !important;
-  padding-bottom: 0 !important;
+	padding-right: 0 !important;
+	padding-bottom: 0 !important;
 }
 
+/*
 .markdown > pre {
   white-space: break-spaces;
 }
@@ -27,4 +28,25 @@
 
 .markdown .team-profile .profile-container {
   align-self: center;
+} */
+
+pre {
+	white-space: break-spaces;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table>tbody>tr>td {
+	border: solid 1px #cecece;
+	padding: 0 3px;
+}
+
+.team-profile {
+	margin-bottom: 16px !important;
+}
+
+.team-profile .profile-container {
+	align-self: center;
 }

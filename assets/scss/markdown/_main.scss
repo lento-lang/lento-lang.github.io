@@ -10,27 +10,23 @@
 	padding-bottom: 0 !important;
 }
 
-.markdown {
-	width: 100%;
+pre > code {
+	white-space: pre;
+}
 
-	& pre > code {
-		white-space: pre;
+table {
+	border-collapse: collapse;
+
+	&>tbody>tr>td {
+		border: solid 1px #cecece;
+		padding: 0 3px;
 	}
+}
 
-	&>table {
-		border-collapse: collapse;
+.team-profile {
+	margin-bottom: 8px !important;
 
-		&>tbody>tr>td {
-			border: solid 1px #cecece;
-			padding: 0 3px;
-		}
-	}
-
-	.team-profile {
-		margin-bottom: 16px !important;
-
-		.profile-container {
-			align-self: center;
-		}
+	.profile-container {
+		align-self: center;
 	}
 }
