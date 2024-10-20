@@ -47,7 +47,7 @@ Begin with [installing Lento](/install) and then move on to the [Getting Started
 
 - [Contributing](/contributing)
 - [Code of Conduct](/code-of-conduct)
-- [License](/license)
+- [License](/LICENSE.txt)
 
 </div>
 </div>
