@@ -7,10 +7,7 @@ date = 2024-10-20T15:12:37+02:00
 
 Welcome to the Lento Programming Language documentation!
 Here you will find everything you need to know about Lento, from the basics to the advanced features.
-
-## Formal Specification
-
-Read the [formal language specification](specification) for a detailed description of Lento.
+Begin with [installing Lento](/install) and then move on to the [Getting Started](#getting-started) section.
 
 <br/><br/>
 
@@ -19,8 +16,7 @@ Read the [formal language specification](specification) for a detailed descripti
 
 ## Getting Started
 
-- [Installation](/install)
-- [Hello, World!](/hello-world)
+- [Hello, World!](hello-world)
 - [Syntax](syntax)
 - [Types](types)
 - [Variables](variables)
@@ -95,3 +91,8 @@ Additional resources for learning more about Lento and its ecosystem external to
 
 </div>
 </div>
+
+## Formal Specification
+
+Read the [formal language specification](specification) for a detailed description of Lento syntax and semantics.
+This document is intended for language implementors and those interested in the formal grammar of the language.
