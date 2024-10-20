@@ -1,5 +1,5 @@
 +++
-title = "Lento Community"
+title = "Community"
 date = 2024-10-20T15:12:37+02:00
 # subpage = "community"
 hideLogo = false
