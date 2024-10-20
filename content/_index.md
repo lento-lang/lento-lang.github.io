@@ -1,5 +1,5 @@
 +++
-title = "Lento Programming Language"
+title = "The Lento Programming Language"
 date = 2024-10-20T15:12:37+02:00
 hideLogo = true
 +++
