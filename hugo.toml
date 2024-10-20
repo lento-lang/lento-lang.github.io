@@ -1,6 +1,7 @@
 baseURL = 'https://example.org/'
 languageCode = 'en-us'
-title = 'My New Hugo Site'
+title = 'The Lento Programming Language'
+cascade.description = "Welcome to the Lento Programming Language — A functional programming language that aims to purify the object-oriented paradigm."
 
 [markup.asciidocExt]
 safeMode = "unsafe"
