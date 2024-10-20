@@ -1,6 +1,7 @@
 +++
 title = "Specification"
 date = 2024-10-20T15:12:37+02:00
+nowrap = true
 +++
 
 # Formal Lento Language Specification
