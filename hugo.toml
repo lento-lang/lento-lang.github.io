@@ -1,3 +1,9 @@
 baseURL = 'https://example.org/'
 languageCode = 'en-us'
 title = 'My New Hugo Site'
+
+[markup.asciidocExt]
+safeMode = "unsafe"
+
+[markup.goldmark.renderer]
+unsafe = true

@@ -4,10 +4,6 @@ date = 2024-10-20T15:12:37+02:00
 hideLogo = true
 +++
 
-# Lento Programming Language
-
-Lento is a programming language designed for simplicity, readability, and maintainability. It is a statically typed, compiled language with a focus on performance and safety. Lento is designed to be easy to learn and use, with a syntax that is clean and easy to read.
-
 <section class="default large">
 	<div class="container">
 		<div class="ui grid landing">
