@@ -13,7 +13,7 @@ hideLogo = true
 					An enjoyable functional programming language that aims to purify the object-oriented paradigm.
 				</p>
 				<p>
-					<a href="/install.php"><button class="ui positive basic button">Learn more</button></a>
+					<a href="/install"><button class="ui positive basic button">Learn more</button></a>
 				</p>
 			</div>
 			<div class="eight wide column landing-logo">
@@ -173,7 +173,7 @@ hideLogo = true
 		<p>
 			Lento is being developed by a driven team that works hard to create a user environment as good as possible for all of you developers.
 		</p>
-		<a href="/doc/team.php" class="ui yellow button">Meet the Team</a>
+		<a href="/team" class="ui yellow button">Meet the Team</a>
 	</div>
 </section>
 <section class="get-involved red">
