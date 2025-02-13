@@ -1,16 +1,10 @@
 section {
-	color: #fff;
 	padding-top: 60px;
 	padding-bottom: 50px;
 	font-size: 1.3em;
 
-
 	&.large {
 		padding-bottom: 150px;
-	}
-
-	&.default {
-		color: #000;
 	}
 
 	&.white {
@@ -24,10 +18,12 @@ section {
 
 	&.blue {
 		background-color: #2169C7; // #3178c6;
+		color: #fff;
 	}
 
 	&.green {
 		background-color: #246910; // #1B591B; // #0b7261;
+		color: #fff;
 	}
 
 	&.yellow {
@@ -37,6 +33,7 @@ section {
 
 	&.purple {
 		background-color: #2e2459;
+		color: #fff;
 
 		.underlined::after {
 			border-color: #A7233A;
@@ -45,6 +42,7 @@ section {
 
 	&.red {
 		background-color: #A7233A; // #AD5B51;
+		color: #fff;
 
 		.underlined::after {
 			border-color: #2e2459;
