@@ -4,9 +4,9 @@ date = 2024-10-20T15:12:37+02:00
 nowrap = true
 +++
 
-# Formal Lento Language Specification
+# Formal Specification
 
-Read the latest version of the language specification on [Google Docs](https://docs.google.com/document/d/11YPY_ghoEEmZSWh8hA_zNTzjiD1p2QWrjE39nnOVSlA/edit?usp=sharing)
+Read the latest version of the language specification on [Google Docs](https://docs.google.com/document/d/11YPY_ghoEEmZSWh8hA_zNTzjiD1p2QWrjE39nnOVSlA/edit?usp=sharing) or the [PDF version](language_specification_v1.pdf).
 
 # Abstract
 

@@ -14,7 +14,7 @@ date = 2024-10-20T15:12:37+02:00
 ## William Rågstad
 
 Founder and lead architect of the Lento programming language.
-He designed the language in late 2020, and was initially working on the first version of the official release including an interpreter and CLI.
+He designed the first revision of the language 2017, and was initially working on the first version of the official release including an interpreter and CLI.
 [Twitter](https://twitter.com/WilliamRagstad).
 </div>
 </div>

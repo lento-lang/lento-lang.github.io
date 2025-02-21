@@ -52,6 +52,8 @@ Begin with [installing Lento](/install) and then move on to the [Getting Started
 </div>
 </div>
 
+### Check out the [Reference Manual](reference)
+
 ## Further Reading
 
 Additional resources for learning more about Lento and its ecosystem external to this documentation.
@@ -59,7 +61,7 @@ Additional resources for learning more about Lento and its ecosystem external to
 <div class="two column row ui grid responsive">
 	<div class="column">
 
-## Books
+### Books
 
 - [Programming in Lento](books/programming-in-lento)
 - [The Lento Programming Language](books/the-lento-programming-language)
@@ -67,7 +69,7 @@ Additional resources for learning more about Lento and its ecosystem external to
 	</div>
 	<div class="column">
 
-## Papers
+### Papers
 
 - [The Lento Programming Language](papers/the-lento-programming-language)
 - [The Design and Implementation of Lento](papers/the-design-and-implementation-of-lento)
@@ -78,7 +80,7 @@ Additional resources for learning more about Lento and its ecosystem external to
 <div class="two column row ui grid responsive">
 	<div class="column">
 
-## Blogs
+### Blogs
 
 - [The Lento Blog](blogs/the-lento-blog)
 - [The Lento Programming Language Blog](blogs/the-lento-programming-language-blog)
@@ -86,7 +88,7 @@ Additional resources for learning more about Lento and its ecosystem external to
 	</div>
 	<div class="column">
 
-## Videos
+### Videos
 
 - [Introduction to Lento - Tutorial series](videos/introduction-to-lento)
 
