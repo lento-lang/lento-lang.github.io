@@ -71,6 +71,7 @@ If you are interested in helping out, read the contributing guide and our code o
 -->
 
 - [Type System](type-system)
+- [Subtyping](subtyping)
 - [Polymorphism](polymorphism)
 - [Type Classes](type-classes)
 - [Dependent Types](dependent-types)
