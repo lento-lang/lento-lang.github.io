@@ -141,7 +141,7 @@ To be announced.
 
 ## Reference Manual
 
-Check out the [Reference Manual](reference) for a comprehensive guide to Lento's syntax, semantics, and standard library.
+Check out the [quick reference cheat sheet](reference) for a comprehensive guide to Lento's syntax, semantics, and standard library.
 This section is ideal for experienced programmers looking for quick information about specific language features.
 
 ## Formal Specification
