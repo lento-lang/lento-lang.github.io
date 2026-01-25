@@ -89,6 +89,7 @@ IGNORED TOPICS:
 - [Memory Management](memory-management)
 - [Concurrency Models](concurrency-models)
 - [Automatic Parallelization](parallelization)
+- [Compile-time Evaluation](comptime)
 - [Metaprogramming](metaprogramming)
 - [Built-in Attributes](std-attributes) <!-- (annotations for functions, types, etc. for macro-level decorations) -->
 - [Program Synthesis](program-synthesis)
