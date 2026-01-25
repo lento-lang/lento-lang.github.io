@@ -21,6 +21,7 @@ Lentoers interact, talk and collaborate across several mediums and around the wo
 Places to ask questions and find answers:
 
 - [StackOverflow](http://stackoverflow.com/questions/tagged?tagnames=lento)
+- [Reddit](https://www.reddit.com/r/LentoLang/)
 <!-- - [The Lento mailing lists](mailing-lists/) -->
 
 ## Supporting the Community

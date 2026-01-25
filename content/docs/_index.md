@@ -20,6 +20,7 @@ If you are interested in helping out, read the contributing guide and our code o
 ## Getting Started
 
 <!--
+IGNORED TOPICS:
 - [Concurrency](concurrency)
 -->
 
@@ -28,6 +29,7 @@ If you are interested in helping out, read the contributing guide and our code o
 - [Types](types)
 - [Variables](variables)
 - [Functions](functions)
+- [Numeric Conversions](numeric-conversions)
 - [Control Flow](control-flow)
 - [Pattern Matching](pattern-matching)
 - [Modules and Namespaces](modules)
@@ -48,6 +50,7 @@ If you are interested in helping out, read the contributing guide and our code o
 
 ## Advanced
 <!--
+IGNORED TOPICS:
 - [FAQ](faq)
 - [Generics](generics)
 - [Traits](traits)
@@ -74,6 +77,7 @@ If you are interested in helping out, read the contributing guide and our code o
 
 - [Type System](type-system)
 - [Subtyping](subtyping)
+- [Nominal vs Structural Typing](nominal-vs-structural)
 - [Polymorphism](polymorphism)
 - [Type Classes](type-classes)
 - [Dependent Types](dependent-types)
