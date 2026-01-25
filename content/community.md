@@ -12,14 +12,16 @@ Lentoers interact, talk and collaborate across several mediums and around the wo
 <br/><br/>
 
 <div class="two column row ui grid responsive">
-	<div class="column">
+<div class="column">
 
 ## Online Communities and Social Resources
 
-Lentoers are active on a number of online areas, but the most busy are below:
+<!-- Lentoers are active on a number of online areas, but the most busy are below: -->
+
+Places to ask questions and find answers:
 
 - [StackOverflow](http://stackoverflow.com/questions/tagged?tagnames=lento)
-- [The Lento mailing lists](mailing-lists/)
+<!-- - [The Lento mailing lists](mailing-lists/) -->
 
 ## Supporting the Community
 
