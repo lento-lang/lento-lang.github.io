@@ -37,6 +37,8 @@ If you are interested in helping out, read the contributing guide and our code o
 - [Debugging](debugging)
 - [Profiling](profiling)
 - [Performance](performance)
+- [Optimization](optimization)
+- [Interoperability](interoperability)
 - [Build System](build-system)
 - [Package Management](package-management)
 - [Tooling](tooling) <!-- (LSP, linters, formatters, etc.) -->
@@ -80,8 +82,6 @@ If you are interested in helping out, read the contributing guide and our code o
 - [Memory Management](memory-management)
 - [Concurrency Models](concurrency-models)
 - [Automatic Parallelization](parallelization)
-- [Interoperability](interoperability)
-- [Optimization](optimization)
 - [Metaprogramming](metaprogramming)
 - [Program Synthesis](program-synthesis)
 - [Holes and Partial Programs](holes-and-partial-programs)
