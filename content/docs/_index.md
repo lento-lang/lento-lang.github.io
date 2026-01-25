@@ -68,6 +68,8 @@ If you are interested in helping out, read the contributing guide and our code o
   - [Implementation](protocol-implementation)
   - [Deadlock Freedom](deadlock-freedom)
   - [Examples](session-types-examples)
+- [Gradual Typing](gradual-typing)
+- [Reflection](reflection)
 -->
 
 - [Type System](type-system)
@@ -84,8 +86,11 @@ If you are interested in helping out, read the contributing guide and our code o
 - [Concurrency Models](concurrency-models)
 - [Automatic Parallelization](parallelization)
 - [Metaprogramming](metaprogramming)
+- [Built-in Attributes](std-attributes) <!-- (annotations for functions, types, etc. for macro-level decorations) -->
 - [Program Synthesis](program-synthesis)
 - [Holes and Partial Programs](holes-and-partial-programs)
+- [Partial Evaluation](partial-evaluation)
+- [Compiler Internals](compiler-internals)
 - [Language Extensions](language-extensions) <!-- (custom operator, compiler plugins, etc.) -->
 
 </div>
