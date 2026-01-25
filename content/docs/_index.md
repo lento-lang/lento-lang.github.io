@@ -132,7 +132,7 @@ To be announced.
 - [The Lento Blog](blogs/the-lento-blog)
 - [The Lento Programming Language Blog](blogs/the-lento-programming-language-blog)
 -->
-To be announced.
+- [WilliamR.dev](https://williamr.dev/) on Lento and other programming topics
 
 </div>
 <div class="column">
