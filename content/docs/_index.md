@@ -30,7 +30,7 @@ If you are interested in helping out, read the contributing guide and our code o
 - [Functions](functions)
 - [Control Flow](control-flow)
 - [Pattern Matching](pattern-matching)
-- [Modules](modules)
+- [Modules and Namespaces](modules)
 - [Standard Library](standard-library)
 - [Error Handling](error-handling)
 - [Testing](testing)
